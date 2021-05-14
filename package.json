@@ -1,0 +1,30 @@
+{
+  "name": "nodeboot-database-starter",
+  "version": "1.0.0-alpha",
+  "description": "database starter inspired in spring boot database starter",
+  "main": "src/main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodeboot/nodeboot-database-starter"
+  },
+  "keywords": [
+    "npm",
+    "database",
+    "starter"
+  ],
+  "author": "jrichardsz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodeboot/nodeboot-database-starter/issues"
+  },
+  "homepage": "https://github.com/nodeboot/nodeboot-database-starter",
+  "dependencies": {
+    "knex": "^0.95.5",
+    "meta-js": "github:jrichardsz/meta-js#1.0.1-pre-alpha",
+    "mysql": "^2.18.1",
+    "pg": "^8.6.0"
+  }
+}
