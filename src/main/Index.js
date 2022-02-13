@@ -2,7 +2,7 @@ const ObjectHelper = require('./common/object/ObjectHelper.js');
 
 function DatabaseStarter() {
 
-  this.autoConfigure = () => {
+  this.autoConfigure = async () => {
     console.log("Searching database engine ...");
 
     if (!ObjectHelper.hasProperty(global.NodebootContext, "instancedDependecies.configuration.nodeboot.database.client")) {
@@ -22,6 +22,7 @@ function DatabaseStarter() {
       require.resolve(databaseClient)
       console.log(`database: ${databaseClient} was detected. Configuring...`);
       const knex = require('knex')(options);
+      await knex.raw('SELECT 1').then();
       return knex;
     } catch (err) {
       console.log("database client cannot be loaded as npm module: " + databaseClient);
