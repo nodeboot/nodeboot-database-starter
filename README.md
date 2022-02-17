@@ -13,10 +13,11 @@ if (require.resolve(rootNodeModulesLocation+'/nodeboot-database-starter')) {
    console.log("nodeboot-database-starter was detected. Configuring...");
    const DatabaseStarter = require(rootNodeModulesLocation+"/nodeboot-database-starter");
    var databaseStarter = new DatabaseStarter();
-   var databaseCriteria = databaseStarter.autoConfigure(rootNodeModulesLocation);
+   var dbSession = await databaseStarter.autoConfigure(rootNodeModulesLocation);
 
-   if(typeof databaseCriteria !== 'undefined'){
-     this.instancedDependecies["databaseCriteria"] = databaseCriteria || {};
+   if (typeof dbSession !== 'undefined') {
+     console.log("dbSession is ready");
+     this.instancedDependecies["dbSession"] = dbSession || {};
    }
 }
 ```
