@@ -1,6 +1,6 @@
 {
   "name": "nodeboot-database-starter",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "database starter inspired in spring boot database starter",
   "main": "src/main/Index.js",
   "scripts": {

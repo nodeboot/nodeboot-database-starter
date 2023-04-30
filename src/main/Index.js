@@ -26,7 +26,7 @@ function DatabaseStarter() {
       return knex;
     } catch (err) {
       console.log("database client cannot be loaded as npm module: " + databaseClient);
-      console.log(err);
+      throw err;
     }
   }
 }
